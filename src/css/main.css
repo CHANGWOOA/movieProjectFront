@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular';
+}
+
+.appBody {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #171717;
+    position: relative;
+}
+
+.mainContent {
+    flex : 1;
+    padding: 0;
+    min-height: 600px;
+    margin-bottom: 50px;
+    position: relative; 
+}
+
+.footerContent {
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    height: 300px;
+}
+.header_body {
+    color: white;
+    display: flex;
+    height: 80px;
+    position: relative;
+    z-index: 10;
+    background-color: #171717;
+    justify-content: space-between;  /* 요소들을 양쪽 끝으로 배치 */
+    align-items: center;  /* 세로로 중앙 정렬 */
+}
+
+.homepage_header {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+}
+
+.logo{
+    margin: 15px;
+    font-family: "Bebas Neue", serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #7857bd;
+    text-decoration-line: none;
+}
+.searchForm{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    position: relative;
+    margin-left: auto; 
+}
+.search{
+    width: 250px;
+    height: 30px;
+    outline: none;
+    background-color: transparent;
+    border-width: 0 0 1px;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.search_btn{
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background-color: transparent;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.profile_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 9px;
+    margin-right: 40px;
+    background-color: white;
+    margin-left: auto;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.profile_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.embla {
+    overflow: hidden;
+    width: 100%;
+}
+.embla__container {
+    display: flex;
+}
+.embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+.embla__slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.linear_gradient{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+    linear-gradient(to left, rgba(23, 23, 23, 0.0), rgba(23, 23, 23, 0.1), rgba(23, 23, 23, 0.4), rgba(23, 23, 23, 0.9), rgba(23, 23, 23, 1.0)),
+    linear-gradient(to bottom, rgba(23, 23, 23, 0.0), rgba(23, 23, 23, 0.1), rgba(23, 23, 23, 0.4), rgba(23, 23, 23, 0.9), rgba(23, 23, 23, 1.0)), 
+    linear-gradient(to top, rgba(23, 23, 23, 0.0), rgba(23, 23, 23, 0.0), rgba(23, 23, 23, 0.0), rgba(23, 23, 23, 0.0), rgba(23, 23, 23, 0.1));
+}
+.main_movie_info {
+    font-family: 'Pretendard-Regular';
+    position: absolute;
+    z-index: 3;
+    padding: 30px;
+    margin-left: 20px;
+    top: 380px;
+    color: #ffffff;
+}
+.main_movie_title{
+    font-size: 40px;
+    font-weight: 900;
+}
+.main_movie_titleE{
+    padding-bottom: 20px;
+}
+
+.mainBtn{
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.mainBtn button{
+    width: 100px;
+    height: 33px;
+    background-color: #381E72;
+    border-radius: 10px;
+    border-style: none;
+    color: #ffffff;
+    font-size: small;
+    line-height: 33px;
+}
+.mainBtn button:hover{
+    cursor: pointer;
+    background-color: #7857bd;
+}
+
+.embla-wrapper {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.carousel-btn img {
+    width: 30px;
+    height: 30px;
+    pointer-events: auto;
+}
+
+.prev {
+    left: 4px;
+}
+
+.next {
+    right: 4px;
+}
+
+.carousel-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 85%;
+    display: flex;
+    gap: 0.5px;
+}
+
+.indicator-bar {
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.indicator-bar.active {
+    background-color: #7857bd;
+    opacity: 1;
+}
+.movieList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin: 0 30px;
+}
+.poster {
+    flex: 0 1 180px;
+    height: 270px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    position: relative;
+}
+.poster:hover {
+    transform: translateY(-15px);
+}
+.poster img{
+    width: 180px;
+    height: 270px;
+    overflow: hidden;
+}
+.poster .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 270px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.poster:hover .overlay {
+    opacity: 1;
+}
+
+
+.overlay button {
+    background-color: #381E72;
+    border: none;
+    margin: 10px 7px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 80px;
+    height: 28px;
+}
+
+.overlay button:hover {
+    background-color: #7857bd;
+}
+
+.dropDownMenu {
+    position: relative;
+    display: inline-block;
+}
+.dropDown {
+    position: absolute;
+    font-size: 13px;
+    top: 50px;
+    right: 20px;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.37);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    list-style: none;
+    padding: 5px 0;
+    display: none;
+}
+.dropDown li {
+    padding: 10px;
+    text-align: center;
+}
+.dropDown li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+.dropDown li:hover {
+    font-weight: bold;
+}
+.dropDownMenu:hover .dropDown {
+    display: block;
+}
+.dropDownMenu:hover .profile_img{
+    filter: brightness(0.5);
+}
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000006e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    width: 700px;
+    background-color: #171717;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    min-height: 500px;
+    max-height: 650px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
