@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+영화 예매 사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*기간 : 2025.02~
 
-## Available Scripts
+*설명 : 
+영화 예매 서비스를 제공하며 메인 페이지와 관리자 페이지로 구성됩니다.  
+영화진흥위원회(Kobis)와 KMDB API를 통해 최신 영화 데이터를 수집해 데이터베이스에 저장합니다.  
+관리자 페이지에서는 영화관리에 이어 회원 관리, 상영 관리, 결제 관리 기능을 제공할 예정입니다.
 
-In the project directory, you can run:
+*사용언어 및 기술스택 :
+ - Backend : Java (Spring MVC), MyBatis, HikariCP
+ - Frontend : React.js, JavaScript, HTML, CSS
+ - Database : Oracle
+ - Tools : Spring Tool Suite 3, Visual Studio Code, GitHub, Notion
+ - API : Kobis·KMDB API를 통한 데이터 수집 및 DB 저장
 
-### `npm start`
+*주요 기능
+ - 영화 API(Kobis·KMDB)를 통해 영화 데이터를 수집 및 DB 저장
+ - 기존 데이터는 업데이트, 신규 데이터는 추가되도록 트랜잭션 처리 적용
+ - 관리자 페이지를 통해 회원, 상영, 결제 관리 기능 제공 예정
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*팀원 :
+ - 소담, 성호, 영민, 호영, 창우
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*담당 역할 (관리자 페이지 담당)
+ - 플로우차트 작성 : 관리자 페이지의 흐름 정의 및 추후 수정 예정  
+ - 기본 코드 작성 : `DTO`, `mapper.xml`, `mapper`, `service`, `serviceimpl`, `controller` 작성 (호영님과 협업)  
+ - API 데이터 수집 : Kobis·KMDB API를 통해 영화 데이터를 가져와 데이터베이스에 저장  
+ - 트랜잭션 처리 : 기존 데이터는 업데이트, 신규 데이터는 추가되도록 트랜잭션 어노테이션 적용  
+ - 코드 리팩토링 : 유지보수와 가독성을 위해 `serviceimpl`과 `movieutils`로 기능 분리  
+ - 앞으로의 계획 : 회원 관리, 상영 관리, 결제 관리 기능 구현 및 React.js를 통한 프론트엔드 개발 담당
